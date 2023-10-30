@@ -42,18 +42,18 @@ const QuanLyPhong: React.FC = (props: Props) => {
     data = [...getStoreJson("rooms")];
   }
   const { userProfile } = useSelector((state: RootState) => state.userReducer);
-  if (userProfile?.role != "ADMIN") {
-    Swal.fire({
-      icon: "warning",
-      text: `Vui lòng đăng nhập bằng tài khoản Admin để tiếp tuc`,
-      confirmButtonText: "OK",
-    }).then((res) => {
-      if (res["isConfirmed"]) {
-        history.push("/dang-nhap");
-      }
-    });
-  }
-  // const { rooms } = useSelector((state: RootState) => state.locationReducer);
+  // if (userProfile?.role != "ADMIN") {
+  //   Swal.fire({
+  //     icon: "warning",
+  //     text: `Vui lòng đăng nhập bằng tài khoản Admin để tiếp tuc`,
+  //     confirmButtonText: "OK",
+  //   }).then((res) => {
+  //     if (res["isConfirmed"]) {
+  //       history.push("/dang-nhap");
+  //     }
+  //   });
+  // }
+  const { rooms } = useSelector((state: RootState) => state.locationReducer);
   const [room, setRoom] = useState<DataType>();
   const [title, setTitle] = useState("Thông tin phòng thuê");
   const [open, setOpen] = useState(false);

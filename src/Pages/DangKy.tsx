@@ -49,7 +49,7 @@ const DangKy = (props: Props) => {
         validationSchema: yup.object().shape({
             email: yup
                 .string()
-                .required("Không đẻ được trống email!")
+                .required("Không được để trống email!")
                 .email("Email không đúng !"),
             password: yup
                 .string()

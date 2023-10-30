@@ -105,17 +105,17 @@ const QuanLyViTri = (props: Props) => {
       ),
     },
   ];
-  if (userProfile?.role != "ADMIN") {
-    Swal.fire({
-      icon: "warning",
-      text: `Vui lòng đăng nhập bằng tài khoản Admin để tiếp tuc`,
-      confirmButtonText: "OK",
-    }).then((res) => {
-      if (res["isConfirmed"]) {
-        history.push("/dang-nhap");
-      }
-    });
-  }
+  // if (userProfile?.role != "ADMIN") {
+  //   Swal.fire({
+  //     icon: "warning",
+  //     text: `Vui lòng đăng nhập bằng tài khoản Admin để tiếp tuc`,
+  //     confirmButtonText: "OK",
+  //   }).then((res) => {
+  //     if (res["isConfirmed"]) {
+  //       history.push("/dang-nhap");
+  //     }
+  //   });
+  // }
   let data: DataType[] = [];
 
   if (getStoreJson("location")) {
